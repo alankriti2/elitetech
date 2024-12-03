@@ -1,0 +1,85 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc;
+    margin: 0;
+}
+
+/* Navigation Bar */
+.navbar {
+    height: 10%;
+    background-color: #f0f0d0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 40px;
+    font-weight: bold;
+    padding-left: 40px;
+}
+
+
+
+/* Main Content */
+.container {
+    margin-top: 10%; /* Space for fixed navbar */
+    text-align: center;
+    background-color: #f0f0d0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 30%;
+    height: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.converter label {
+    display: block;
+    margin: 15px 0px 15px;
+    font-weight: bold;
+    font-size: larger;
+    height: 40px;
+}
+
+.converter input, .converter select, .converter button {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+#convert-button {
+    margin-top: 20px;
+    background-color: #198754;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+}
+
+#convert-button:hover {
+    background-color: #015b31;
+}
+
+.result {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    margin-top: 15px;
+}

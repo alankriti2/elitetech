@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My skills</title>
+    <style>
+        body{
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .skills {
+    padding: 2rem;
+    background: black;
+    text-align: center;
+}
+
+.skills h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #ab47bc;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7rem;
+  
+}
+
+.skills-category {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 600px;
+    height: 500px;
+}
+
+.skills-category h2 {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.skills-category ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    font-weight: bold;
+    font-size: 80px;
+}
+
+.skills-category ul li {
+    font-size: 1rem;
+    color: #555;
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+}
+
+.stars {
+    font-family: Arial, sans-serif;
+    color: #FFD700; /* Gold color for stars */
+    font-size: 40px;
+}
+.navbar {
+    background-color: black;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 30px;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.navbar .logo {
+    margin-left: 0%;
+    padding-left: 0px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ab47bc;
+    text-transform: uppercase;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .nav-links li {
+    position: relative;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 2.5rem;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #6a11cb;
+}
+
+.navbar .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 0.3rem;
+}
+
+.navbar .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #ab47bc;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+        display: none;
+    }
+
+    .navbar .nav-links.show {
+        display: flex;
+    }
+
+    .navbar .hamburger {
+        display: flex;
+    }
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Alankriti</div>
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./skills.html">Skills</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <section class="skills">
+        <h1>My Skills</h1>
+        <div class="skills-container">
+            <!-- Technical Skills -->
+            <div class="skills-category">
+                <h2>Technical Skills</h2>
+                <ul>
+                    <li>
+                        HTML, CSS, JavaScript
+                        <span class="stars">★★★★★</span>
+                    </li>
+                    <li>
+                        React.js and Front-End Development
+                        <span class="stars">★★★★☆</span>
+                    </li>
+                    <li>
+                        Node.js, Express.js, MongoDB
+                        <span class="stars">★★★☆☆</span>
+                    </li>
+                    <li>
+                        Responsive Web Design
+                        <span class="stars">★★★★★</span>
+                    </li>
+                    <li>
+                        Version Control (Git & GitHub)
+                        <span class="stars">★★★★☆</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- Creative Skills -->
+            <div class="skills-category">
+                <h2>Creative Skills</h2>
+                <ul>
+                    <li>
+                        Drawing and Sketching
+                        <span class="stars">★★★★★</span>
+                    </li>
+                    <li>
+                        Painting (Acrylics and Watercolors)
+                        <span class="stars">★★★★☆</span>
+                    </li>
+                    <li>
+                        Visual Storytelling
+                        <span class="stars">★★★★☆</span>
+                    </li>
+                    <li>
+                        Digital Art and Design
+                        <span class="stars">★★★☆☆</span>
+                    </li>
+                    <li>
+                        Conceptual Thinking
+                        <span class="stars">★★★★★</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

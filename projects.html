@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <style>
+        /* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.navbar {
+    background-color: black;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 30px;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.navbar .logo {
+    margin-left: 0%;
+    padding-left: 0px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ab47bc;
+    text-transform: uppercase;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .nav-links li {
+    position: relative;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 2.5rem;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #6a11cb;
+}
+
+.navbar .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 0.3rem;
+}
+
+.navbar .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #ab47bc;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+        display: none;
+    }
+
+    .navbar .nav-links.show {
+        display: flex;
+    }
+
+    .navbar .hamburger {
+        display: flex;
+    }
+}
+.projects {
+    padding: 2rem;
+    background: black;
+    text-align: center;
+    color: #ab47bc;
+}
+
+.projects h1 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.project-card {
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h2 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.project-card p {
+    padding: 0 1rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+.project-card .btn {
+    display: inline-block;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #ab47bc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.project-card .btn:hover {
+    background-color: #6a11cb;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Alankriti</div>
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./skills.html">Skills</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Section -->
+    <section class="projects">
+        <h1>My Projects</h1>
+        <div class="project-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <img src="Logo2.jpg" alt="Project 1" style="width: 60px; height: 60px;">
+                <h2>reUNITE</h2>
+                <p>This website is a dedicated platform for dog and puppy enthusiasts, providing comprehensive information and interactive tools to ensure the well-being of your furry friends. Designed with an intuitive and visually appealing interface, the website focuses on delivering essential knowledge about dog breeds, health, grooming, nutrition, and training—all in one place. 
+                </p>
+                <a href="https://github.com/yourusername/project1" target="_blank" class="btn">View on GitHub</a>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card">
+                <img src="mobilelogo.png" alt="Project 2"style="width: 60px; height: 60px;">
+                <h2>Electronic e-cart</h2>
+                <p>An e-cart platform for browsing and purchasing gadgets effortlessly.Developed using HTML, CSS, JavaScript, and React.js for a dynamic and responsive user interface. Allows users to filter gadgets by category (laptops, phones, tablets) and price, making it easy to find the right product.Users can add items to their cart, review selections, and proceed to checkout smoothly.
+                    </p>
+                <a href="https://github.com/yourusername/project2" target="_blank" class="btn">View on GitHub</a>
+            </div>
+            <div class="project-card" >
+                <img src="artlogo.jpg" alt="Project 3" style="width: 60px; height: 60px;">
+                <h2>Art Portfolio</h2>
+                <p>A brief description of the project, highlighting its purpose and features. is an art blog website designed to showcase various art forms, artist profiles, and articles related to art. The goal was to create a visually appealing and dynamic platform where artists and art enthusiasts could discover and share content. It emphasizes both aesthetics and functionality, catering to the art community.                </p>
+                <a href="https://github.com/yourusername/project1" target="_blank" class="btn">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <img src="portfoliologo.png" alt="Project 4" style="width: 60px; height: 60px;">
+                <h2>My Portfolio</h2>
+                <p>This portfolio website is a reflection of my journey as a web developer and creative individual. It showcases my technical projects, highlighting my expertise in web development and front-end design, along with my artistic skills in drawing and painting. Designed with a clean and user-friendly interface, it provides insights into my background, education, and professional skills. Whether you're here to explore my work or connect for collaboration, this site is a window into my world of creativity and technology.</p>
+                <a href="https://github.com/yourusername/project1" target="_blank" class="btn">View on GitHub</a>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
+
+    
+</body>
+</html>
